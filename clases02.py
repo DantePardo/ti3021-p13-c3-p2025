@@ -10,11 +10,11 @@ class participante:
     def __str__(self):
         return f"{self._rut} {self._nombre} {self._edad}"
 
-participante1: participante = participante (
+participante1 = participante (
     rut = "22072951-6",
     nombre = "dante",
     edad = 19
 )
-print(
-    participante1.presentarse()
-)
+print(participante1.presentarse())
+
+
