@@ -200,10 +200,11 @@ def delete_persona():
             print(f"Eliminando a persona con datos{persona}")
             persona.remove(persona)
             print(f"Persona con rut {rut_busqueda} eliminada exitosamente.")
-    print(f"Persona con rut")
 
+    print(f"Persona con rut {rut_busqueda}, no encontrada")
+    input("presiona enter para continuar")
 
-while true:
+while True:
     print(
         """
         1.crear persona
@@ -214,8 +215,17 @@ while true:
     """
     )
 
-opcion = input("ingrese una opción [1-4,0]: ")
-if opcion == "1":
-    create_persona()
-elif opcion == "2":
-     
+    opcion = input("ingrese una opción [1-4,0]: ")
+    if opcion == "1":
+        create_persona()
+    elif opcion == "2":
+        read_persona()
+    elif opcion == "3":
+        update_persona()
+    elif opcion == "4":
+        delete_persona()
+    elif opcion == "0":
+        break
+    else:
+        print("opcion invalida")
+        input("presione enter para continuar")
