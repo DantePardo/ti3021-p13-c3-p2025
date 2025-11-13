@@ -26,6 +26,6 @@ def create_table () -> None:
             with connection.cursor() as cursor:
                 cursor.execute(query)
                 print("Tabla 'personas' creada.")
-    except oracledb.DatabaseError as e:
-        erro = e 
-        print(f"No se pudo crear la tabla: {erro}") 
+    except oracledb.DatabaseError as error:
+        
+        print(f"No se pudo crear la tabla: {error}") 
